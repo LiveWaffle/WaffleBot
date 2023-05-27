@@ -56,4 +56,4 @@ async def cid(ctx, name: str):
         await ctx.send(embed=embed)
 
 
-bot.run('MTExMjA1NDczNjMxMzY0NzE4NA.GEGCc6.BgbcdHY2RcGGcC9brs8Zw5BM3_lrhBgyGmePXo')
+bot.run('your token')
