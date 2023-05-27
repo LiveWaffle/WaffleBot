@@ -31,12 +31,9 @@ async def aes(ctx):
         main_key = aes_data["mainKey"]
         version = version_data["version"]
         dynamic_Key = aes_data["dynamicKeys"]
-        dynamic_keys = aes_data['dynamicKeys'][0:10]
-        key = "\n".join([dk['key'] for dk in dynamic_keys])
-
         embed = disnake.Embed(title=f"{version} AES Key", color=0x00ff00)
         embed.add_field(name="Main Key", value=main_key, inline=False)
-        for i, key in enumerate(dynamic_keys[:10], start=1):
+        for key in dynamic_Key:
             embed.add_field(name=key['name'], value=key['key'], inline=False)
         await ctx.send(embed=embed)
         
@@ -59,4 +56,4 @@ async def cid(ctx, name: str):
         await ctx.send(embed=embed)
 
 
-bot.run('token')
+bot.run('MTExMjA1NDczNjMxMzY0NzE4NA.GEGCc6.BgbcdHY2RcGGcC9brs8Zw5BM3_lrhBgyGmePXo')
